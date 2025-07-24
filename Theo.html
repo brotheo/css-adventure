@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎨 CSS Playground for Kids</title>
+  <style id="liveStyle">
+    :root {
+      --bg: #f0f8ff;
+      --text: #000;
+      --card: #fff8dc;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: Comic Sans MS, cursive;
+      text-align: center;
+      padding: 20px;
+    }
+    .section {
+      background-color: var(--card);
+      border: 2px dashed #888;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      box-shadow: 2px 2px 8px #aaa;
+    }
+    textarea {
+      width: 90%;
+      height: 130px;
+      font-size: 16px;
+      font-family: monospace;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+    button {
+      margin: 10px;
+      font-size: 16px;
+      padding: 8px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    .character, .sunny, .dance, .rainbow, .box, .hidden, .flex-puzzle {
+      margin: 10px auto;
+      padding: 20px;
+      font-size: 24px;
+      border: 2px solid black;
+      width: fit-content;
+      border-radius: 10px;
+    }
+    .flex-puzzle {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+    }
+    .flex-puzzle div {
+      background: lightblue;
+      padding: 20px;
+      width: 50px;
+    }
+     @media (max-width: 600px) {
+      .character {
+        font-size: 24px;
+        width: 90%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      textarea {
+        font-size: 14px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 CSS Playground for Kids (Age 7+)</h1>
+  <button onclick="toggleTheme()">🌓 Toggle Light/Dark Mode</button>
+
+  <!-- Section 1: Style Froggy -->
+  <div class="section">
+    <h2>🐸 Style Froggy</h2>
+    <p>Challenge: Make Froggy green with big round head!</p>
+    <div class="character froggy">Hi! I'm Froggy</div>
+    <textarea id="froggyCSS">
+.froggy {
+  background-color: green;
+  color: white;
+  font-size: 30px;
+  border-radius: 50px;
+}
+    </textarea>
+    <button onclick="updateStyle('froggyCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 2: Background Gradients -->
+  <div class="section">
+    <h2>🌞 Make It Sunny!</h2>
+    <p>Challenge: Add a yellow-orange gradient.</p>
+    <div class="sunny">🌤️ Bright Day</div>
+    <textarea id="sunnyCSS">
+.sunny {
+  background: linear-gradient(yellow, orange);
+  color: black;
+  font-size: 24px;
+}
+    </textarea>
+    <button onclick="updateStyle('sunnyCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 3: Rainbow Hover Button -->
+  <div class="section">
+    <h2>🌈 Rainbow Button</h2>
+    <p>Challenge: Make the button change to gold when hovered!</p>
+    <button class="rainbow" onmouseover="playSound()">Click Me</button>
+    <textarea id="rainbowCSS">
+.rainbow {
+  background-color: violet;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.rainbow:hover {
+  background-color: gold;
+  color: black;
+}
+    </textarea>
+    <button onclick="updateStyle('rainbowCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 4: Dancing Froggy -->
+  <div class="section">
+    <h2>💃 Dancing Froggy</h2>
+    <p>Challenge: Make Froggy jump!</p>
+    <div class="dance">🐸</div>
+    <textarea id="danceCSS">
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+.dance {
+  animation: jump 1s infinite;
+  font-size: 50px;
+}
+    </textarea>
+    <button onclick="updateStyle('danceCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 5: Shape Playground -->
+  <div class="section">
+    <h2>🔵 Shape Playground</h2>
+    <p>Challenge: Make this box a perfect circle!</p>
+    <div class="box">🔷</div>
+    <textarea id="boxCSS">
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+  border-radius: 50%;
+}
+    </textarea>
+    <button onclick="updateStyle('boxCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 6: Hide and Show -->
+  <div class="section">
+    <h2>🙈 Hide and Show</h2>
+    <p>Challenge: Hide the text using `display: none;`</p>
+    <div class="hidden">🕵️ Secret Message</div>
+    <textarea id="hiddenCSS">
+.hidden {
+  display: none;
+}
+    </textarea>
+    <button onclick="updateStyle('hiddenCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 7: Flexbox Puzzle -->
+  <div class="section">
+    <h2>🧩 Flexbox Puzzle</h2>
+    <p>Challenge: Space out the blocks with <code>gap</code>!</p>
+    <div class="flex-puzzle">
+      <div>🐶</div>
+      <div>🐱</div>
+      <div>🐰</div>
+    </div>
+    <textarea id="flexCSS">
+.flex-puzzle {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+    </textarea>
+    <button onclick="updateStyle('flexCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Audio for hover -->
+  <audio id="hoverSound" src="https://cdn.pixabay.com/audio/2022/08/04/audio_2f25ba5da6.mp3"></audio>
+<div><h3>Created by Teacher Theo</h3></div>
+  <script>
+    function updateStyle(id) {
+      const cssCode = document.getElementById(id).value;
+      document.getElementById("liveStyle").innerHTML += cssCode;
+    }
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = root.style.getPropertyValue('--bg') === '#121212';
+      root.style.setProperty('--bg', isDark ? '#f0f8ff' : '#121212');
+      root.style.setProperty('--text', isDark ? '#000' : '#fff');
+      root.style.setProperty('--card', isDark ? '#fff8dc' : '#333');
+    }
+
+    function playSound() {
+      document.getElementById("hoverSound").play();
+    }
+  </script>
+</body>
+</html>
