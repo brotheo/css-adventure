@@ -12,7 +12,7 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+      font-family: Comic Sans MS, cursive;
       text-align: center;
       padding: 20px;
     }
@@ -66,11 +66,11 @@
       padding: 20px;
       width: 50px;
     }
-     @media (max-width: 600px) {
+    @media (max-width: 600px) {
       .character {
         font-size: 24px;
         width: 90%;
-        font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
       textarea {
         font-size: 14px;
@@ -78,6 +78,56 @@
       button {
         font-size: 16px;
       }
+    }
+    .grid-garden {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+      justify-items: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 250px;
+    }
+    .grid-garden div {
+      background: #e0ffe0;
+      border: 2px solid #4caf50;
+      border-radius: 12px;
+      font-size: 32px;
+      padding: 20px;
+    }
+    .flex-parade {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 10px;
+      min-height: 80px;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+    .flex-parade div {
+      font-size: 40px;
+      background: #fffbe7;
+      border: 2px solid #ff9800;
+      border-radius: 15px;
+      padding: 10px 15px;
+      box-shadow: 1px 2px 6px #ccc;
+    }
+    .grid-party {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 12px;
+      justify-items: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 350px;
+    }
+    .grid-party div {
+      background: #ffe0f7;
+      border: 2px solid #e040fb;
+      border-radius: 14px;
+      font-size: 32px;
+      padding: 18px;
+      box-shadow: 1px 2px 6px #ccc;
     }
   </style>
 </head>
@@ -87,6 +137,8 @@
 
   <!-- Section 1: Style Froggy -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> You can change the color, size, and shape of Froggy!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try making Froggy purple or super big!</div>
     <h2>🐸 Style Froggy</h2>
     <p>Challenge: Make Froggy green with big round head!</p>
     <div class="character froggy">Hi! I'm Froggy</div>
@@ -103,6 +155,8 @@
 
   <!-- Section 2: Background Gradients -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Try using different colors for your gradient!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: You can use three or more colors for a rainbow effect!</div>
     <h2>🌞 Make It Sunny!</h2>
     <p>Challenge: Add a yellow-orange gradient.</p>
     <div class="sunny">🌤️ Bright Day</div>
@@ -118,6 +172,8 @@
 
   <!-- Section 3: Rainbow Hover Button -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Hover means move your mouse over the button!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try changing the border or text color too!</div>
     <h2>🌈 Rainbow Button</h2>
     <p>Challenge: Make the button change to gold when hovered!</p>
     <button class="rainbow" onmouseover="playSound()">Click Me</button>
@@ -138,6 +194,8 @@
 
   <!-- Section 4: Dancing Froggy -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Animation makes things move up and down!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try making Froggy spin or bounce faster!</div>
     <h2>💃 Dancing Froggy</h2>
     <p>Challenge: Make Froggy jump!</p>
     <div class="dance">🐸</div>
@@ -157,6 +215,8 @@
 
   <!-- Section 5: Shape Playground -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Border radius makes corners round or makes a circle!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try making an oval or a pill shape by changing width and height!</div>
     <h2>🔵 Shape Playground</h2>
     <p>Challenge: Make this box a perfect circle!</p>
     <div class="box">🔷</div>
@@ -173,6 +233,8 @@
 
   <!-- Section 6: Hide and Show -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> <code>display: none;</code> hides things on the page.</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try <code>display: block;</code> to show it again!</div>
     <h2>🙈 Hide and Show</h2>
     <p>Challenge: Hide the text using `display: none;`</p>
     <div class="hidden">🕵️ Secret Message</div>
@@ -186,6 +248,8 @@
 
   <!-- Section 7: Flexbox Puzzle -->
   <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Flexbox helps you line up things in a row or column!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try <code>flex-direction: column;</code> to stack the blocks!</div>
     <h2>🧩 Flexbox Puzzle</h2>
     <p>Challenge: Space out the blocks with <code>gap</code>!</p>
     <div class="flex-puzzle">
@@ -201,6 +265,110 @@
 }
     </textarea>
     <button onclick="updateStyle('flexCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 8: Grid Garden -->
+  <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Grid lets you make rows and columns easily!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try <code>grid-template-rows</code> or <code>place-items: center</code> for more fun!</div>
+    <h2>🌱 Grid Garden</h2>
+    <p>Challenge: Make a 2x2 garden with <code>display: grid</code> and <code>grid-gap</code>!</p>
+    <div class="grid-garden">
+      <div>🥕</div>
+      <div>🍅</div>
+      <div>🥦</div>
+      <div>🌽</div>
+    </div>
+    <textarea id="gridCSS">
+.grid-garden {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 250px;
+}
+.grid-garden div {
+  background: #e0ffe0;
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  font-size: 32px;
+  padding: 20px;
+}
+    </textarea>
+    <button onclick="updateStyle('gridCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 9: Flexbox Animals Parade -->
+  <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Flexbox can help you make a parade of animals!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try <code>justify-content: space-between;</code> or <code>align-items: flex-end;</code>!</div>
+    <h2>🐾 Flexbox Animals Parade</h2>
+    <p>Challenge: Make the animals line up at the bottom and spread out!</p>
+    <div class="flex-parade">
+      <div>🦁</div>
+      <div>🐯</div>
+      <div>🐵</div>
+      <div>🦊</div>
+      <div>🐻</div>
+    </div>
+    <textarea id="paradeCSS">
+.flex-parade {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  min-height: 80px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.flex-parade div {
+  font-size: 40px;
+  background: #fffbe7;
+  border: 2px solid #ff9800;
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-shadow: 1px 2px 6px #ccc;
+}
+    </textarea>
+    <button onclick="updateStyle('paradeCSS')">✅ Try It!</button>
+  </div>
+
+  <!-- Section 10: Super Grid Party -->
+  <div class="section">
+    <div style="color:#388e3c;font-size:15px;margin-bottom:6px;"><strong>Note:</strong> Grids can make big parties with lots of friends!</div>
+    <div style="color:#1976d2;font-size:14px;margin-bottom:6px;">Tip: Try <code>grid-template-columns: repeat(3, 1fr);</code> for 3 columns!</div>
+    <h2>🎉 Super Grid Party</h2>
+    <p>Challenge: Make a 3x2 party grid with 6 emojis!</p>
+    <div class="grid-party">
+      <div>🎈</div>
+      <div>🎂</div>
+      <div>🎁</div>
+      <div>🎉</div>
+      <div>🧁</div>
+      <div>🍦</div>
+    </div>
+    <textarea id="partyCSS">
+.grid-party {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 350px;
+}
+.grid-party div {
+  background: #ffe0f7;
+  border: 2px solid #e040fb;
+  border-radius: 14px;
+  font-size: 32px;
+  padding: 18px;
+  box-shadow: 1px 2px 6px #ccc;
+}
+    </textarea>
+    <button onclick="updateStyle('partyCSS')">✅ Try It!</button>
   </div>
 
   <!-- Audio for hover -->
