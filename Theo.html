@@ -126,27 +126,46 @@
       min-width: 0;
     }
     @media (max-width: 600px) {
-      body, .section, h1, h2, h3, p, div, span, textarea, button {
-        font-family: Comic Sans MS, cursive, Verdana, Geneva, Tahoma, sans-serif;
+      html, body, .section, h1, h2, h3, p, div, span, textarea, button {
+        font-family: 'Comic Sans MS', 'Comic Sans', 'Arial Rounded MT Bold', Arial, Verdana, Geneva, Tahoma, sans-serif !important;
         font-style: normal !important;
+        box-sizing: border-box !important;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        min-width: 0;
+        background-color: var(--bg);
+        color: var(--text);
+        text-align: center;
       }
       .section {
         padding: 8px;
         margin: 8px auto;
         width: 99vw;
         max-width: 99vw;
+        box-sizing: border-box;
+        display: block;
       }
       textarea {
-        width: 99vw;
+        width: 97vw;
         max-width: 99vw;
         font-size: 13px;
         padding: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        box-sizing: border-box;
       }
       button {
         font-size: 15px;
         padding: 10px 10px;
-        width: 98vw;
+        width: 97vw;
         max-width: 99vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        box-sizing: border-box;
       }
       h1 {
         font-size: 8vw;
@@ -158,10 +177,14 @@
         font-size: 6vw;
         padding: 8px;
         max-width: 99vw;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
       }
       .flex-puzzle div, .flex-parade div, .grid-garden div, .grid-party div {
         font-size: 8vw;
         padding: 6px;
+        box-sizing: border-box;
       }
     }
   </style>
